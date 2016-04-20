@@ -1,6 +1,6 @@
 from cBasicCommentChecks import *
 
-def testingFunctions():
+def testing_comments():
     cFalseCommentLine = 'if hello there i am not a comment'
     cBOCTest1 = '/* hello there how is it going'
     cBOCTest2 = 'cout << "helloWorld" << endl;/* hello there how is it going'
@@ -63,4 +63,4 @@ def testingFunctions():
         print 'error the block clsoe comment checker does not work on general fail test of block comments close'
 
 if __name__ == '__main__':
-	#call testing file for this script
+    testing_comments()
