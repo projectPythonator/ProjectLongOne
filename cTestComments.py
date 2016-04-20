@@ -62,5 +62,5 @@ def testingFunctions():
     else:
         print 'error the block clsoe comment checker does not work on general fail test of block comments close'
 
-
-
+if __name__ == '__main__':
+	#call testing file for this script
