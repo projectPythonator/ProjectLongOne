@@ -145,5 +145,5 @@ def cMain():
     print 'the code is ' + str(myLength) + ' long'
     print("--- %s seconds ---" % (time.time() - start_time))
 
-if _name_ == '_main_':
-	#call testing file for this script
+if __name__ == '__main__':
+    #call testing file for this script
