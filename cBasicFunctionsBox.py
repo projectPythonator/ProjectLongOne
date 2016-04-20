@@ -18,6 +18,7 @@ def cLineCommentIndexing(myLine,mSO):
     if myLine.index(mSO) < myLine.index(lnCom):
         return True
     return False
+
 def cBlockCommentIndexing(myLine,mSO):
     """ cBlockCommentIndexing(myLine,mSO)
     this is a function to check c Code
@@ -29,6 +30,7 @@ def cBlockCommentIndexing(myLine,mSO):
     if myLine.index(mSO) < myLine.index(bkCom):
         return True
     return False
+
 def cBlockCommentChecking(myLine,mSO):
     """ cBlockCommentchecking(myLine,mSO)
     this is a function to check c Code
@@ -40,6 +42,7 @@ def cBlockCommentChecking(myLine,mSO):
     if all(a in myLine for a in mSO) and cBlockCommentIndexing(myLine,mSO[0]):
         return True
     return False
+
 def cLineCommentChecking(myLine,mSO):
     """cLineCommentchecking(myLine,mSO)
     this is a function to check c Code
@@ -51,6 +54,7 @@ def cLineCommentChecking(myLine,mSO):
     if all(a in myLine for a in mSO) and cLineCommentIndexing(myLine,mSO[0]):
         return True
     return False
+
 def cForCheck(myLine):
     """ cForCheck(myLine)
     this is a function to check c Code
@@ -69,6 +73,7 @@ def cForCheck(myLine):
         return True
     else:
         return False
+
 def cIfCheck(myLine):
     """ cIfCheck(myLine)
     this is a function to check c Code
@@ -87,6 +92,7 @@ def cIfCheck(myLine):
         return True
     else:
         return False
+
 def cColsCheck(myLine):
     """ cColsCheck(myLine)
     this is a function to check c Code
@@ -105,6 +111,7 @@ def cColsCheck(myLine):
         return True
     else:
         return False
+
 def cDeclarSimpleCheck(myType,myLine):
     """ cDeclarSimpleCheck(myType,myLine)
     this is a function to check c Code
@@ -134,6 +141,7 @@ def cDeclarSimpleCheck(myType,myLine):
         else:
             return False
     return False
+
 def cWhileCheck(myLine):
     """ cWhileCheck(myLine)
     this is a function to check c Code
@@ -152,6 +160,7 @@ def cWhileCheck(myLine):
         return True
     else:
         return False
+
 def cFunctionHeaderCheck(myLine,simpleFunctionTypes):
     """ cFunctionHeaderCheck(myLine,simpleFunctionTypes)
     this is a function to check c Code
@@ -194,6 +203,7 @@ def cFunctionHeaderCheck(myLine,simpleFunctionTypes):
             return False
     else:
         return False
+
 def cBlockBracketOpen(myLine):
     """ cBlockBracketOpen(myLine)
     this is a function to check c Code
@@ -212,6 +222,7 @@ def cBlockBracketOpen(myLine):
         return True
     else:
         return False
+
 def cBlockBracketClose(myLine):
     """ cBlockBracketOpen(myLine)
     this is a function to check c Code
@@ -230,6 +241,7 @@ def cBlockBracketClose(myLine):
         return True
     else:
         return False
+
 def cLibraryIncludes(myLine):
     """ cBlockBracketOpen(myLine)
     this is a function to check c Code
@@ -248,6 +260,7 @@ def cLibraryIncludes(myLine):
         return True
     else:
         return False
+
 def cStructChecker(myLine):
     """ cStructChecker(myLine)
     this is a function to check c Code
@@ -266,3 +279,6 @@ def cStructChecker(myLine):
         return True
     else:
         return False
+
+if __name__ == '__main__':
+	#call testing file for this script
