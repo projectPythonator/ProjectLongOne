@@ -4,31 +4,32 @@ import re
 import time
 
 import cBasicFunctionsBox
-import cBasicCommentChecksv
+import cBasicCommentChecks
 
 def cReadIn():
     """this portion is going to be reading in the code from a file
     it also will be checking for certain chars that may show up
     as unicode"""
 
-	with codecs.open('myinputpuy.txt') as f: # inside of open you can put any file name with txt you want to use to test it
-		cCode = [line.decode('utf-8').strip() for line in f.readlines()]
-	myLength = len(cCode)
-	for index in xrange(myLength):
-		cCode[index] = re.sub(u"(\u2018|\u2019)", "'", cCode[index])
+    with codecs.open('myinputpuy.txt') as f: # inside of open you can put any file name with txt you want to use to test it
+        cCode = [line.decode('utf-8').strip() for line in f.readlines()]
+    myLength = len(cCode)
+    for index in xrange(myLength):
+        cCode[index] = re.sub(u"(\u2018|\u2019)", "'", cCode[index])
     return cCode
 
 def cMain():
-    start_time = time.time()
-    cCode = cReadIn()
     """these are the spot for tuples that contain the strings like int char and what not
     it also will contain bool variables that are used in main for now"""
-    theType = ('int ','char ','string ','float ')
-    simpleFunctionTypes = ('int ','char ','string ','float ','void ')
-    isBlockBodyC = False # used to see if we are still inside a block body
+    theType = ('int ', 'char ', 'string ', 'float ')
+    simpleFunctionTypes = ('int ', 'char ', 'string ', 'float ', 'void ')
+    isBlockBodyC = False  # used to see if we are still inside a block body
     lineNum = 0
     rStack = 0
-	"""this is the portion for all the lists that store lines in different sorted manners"""
+    """this is the portion for all the lists that store lines in different sorted manners"""
+
+    start_time = time.time()
+    cCode = cReadIn()
     cForList = []
     cIfList = []
     cColList = []
@@ -142,8 +143,9 @@ def cMain():
     cBlockedFinal.sort()
     for i in cBlockedFinal:
         print i
-    print 'the code is ' + str(myLength) + ' long'
+    print 'the code is ' + str(lineNum) + ' long'
     print("--- %s seconds ---" % (time.time() - start_time))
 
 if __name__ == '__main__':
     #call testing file for this script
+    cMain()

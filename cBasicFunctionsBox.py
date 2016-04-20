@@ -5,6 +5,7 @@
 #block comment case is if the line contains a block comment
 #line comment case is if the line contains a line comment
 #normal case if the line is just a line on its own
+
 from cBasicCommentChecks import *
 
 def cLineCommentIndexing(myLine,mSO):
@@ -140,7 +141,6 @@ def cDeclarSimpleCheck(myType,myLine):
                 return True
         else:
             return False
-    return False
 
 def cWhileCheck(myLine):
     """ cWhileCheck(myLine)
@@ -280,5 +280,8 @@ def cStructChecker(myLine):
     else:
         return False
 
+def main():
+    pass
+
 if __name__ == '__main__':
-	#call testing file for this script
+    main()
