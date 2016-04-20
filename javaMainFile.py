@@ -18,3 +18,6 @@ def javaMain():
 		jCode[index] = re.sub(u"(\u2018|\u2019)", "'", jCode[index])
 	print "update"
 	print("--- %s seconds ---" % (time.time() - start_time))
+	
+if __name__ == '__main__':
+    #call testing file for this script
