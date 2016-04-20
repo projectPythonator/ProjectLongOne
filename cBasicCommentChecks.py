@@ -1,4 +1,5 @@
 """this Module checks c code for comments"""
+
 def cInLineCommentCheck(myLine):
     """cInLineCommentCheck(myLine)
     this is a function to check c Code
@@ -10,6 +11,7 @@ def cInLineCommentCheck(myLine):
         return True
     else:
         return False
+
 def cBlkCommentStartCheck(myLine):
     """ cBlkCommentStartCheck(myLine):
     this is a function to check c Code
@@ -21,6 +23,7 @@ def cBlkCommentStartCheck(myLine):
         return True
     else:
         return False
+
 def cBlkCommentEndCheck(myLine):
     """cBlkCommentEndCheck(myLine)
     this is a function to check c Code
@@ -32,3 +35,6 @@ def cBlkCommentEndCheck(myLine):
         return True
     else:
         return False
+
+if __name__ == '__main__':
+	#call testing file for this script
