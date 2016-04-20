@@ -1,11 +1,16 @@
 """this is the main module for c code"""
+import codecs
+import re
+import time
+
+import cBasicFunctionsBox
+import cBasicCommentChecksv
 
 def cReadIn():
     """this portion is going to be reading in the code from a file
     it also will be checking for certain chars that may show up
     as unicode"""
-    import codecs
-    import re
+
 	with codecs.open('myinputpuy.txt') as f: # inside of open you can put any file name with txt you want to use to test it
 		cCode = [line.decode('utf-8').strip() for line in f.readlines()]
 	myLength = len(cCode)
@@ -13,11 +18,7 @@ def cReadIn():
 		cCode[index] = re.sub(u"(\u2018|\u2019)", "'", cCode[index])
     return cCode
 
-
 def cMain():
-    import cBasicFunctionsBox
-    import cBasicCommentChecksv
-    import time
     start_time = time.time()
     cCode = cReadIn()
     """these are the spot for tuples that contain the strings like int char and what not
@@ -143,3 +144,6 @@ def cMain():
         print i
     print 'the code is ' + str(myLength) + ' long'
     print("--- %s seconds ---" % (time.time() - start_time))
+
+if _name_ == '_main_':
+	#call testing file for this script
